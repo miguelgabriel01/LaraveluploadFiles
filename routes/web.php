@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UploadController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::view('form', 'upload.form');
+Route::post('/upload', [UploadController::class, 'upload'])->name('upload');
